@@ -67,6 +67,78 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+ 
+
+    const cardSection = document.getElementById('card-section');
+    const coinCountEl = document.getElementById('coin-count');
+    const copyCountEl = document.getElementById('copy-count');
+    const favCountEl = document.getElementById('fav-count');
+    const callHistoryList = document.getElementById('call-history-list');
+    const clearHistoryBtn = document.getElementById('clear-history-btn');
+
+    let coinCount = 100;
+    let copyCount = 2;
+    let favCount = 0;
+
+
 
     
+    services.forEach(service => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        card.innerHTML = `
+            <div class="card-header">
+                <img src="${service.icon}" alt="${service.name}" class="card-icon">
+                <img src="assets/heart.png" alt="Favorite" class="fav-icon">
+            </div>
+            <h4 class="card-title">${service.name}</h4>
+            <p class="card-subtitle">${service.englishName}</p>
+            <p class="card-number">${service.number}</p>
+            <span class="category-badge">${service.category}</span>
+            <div class="card-buttons">
+                <button class="card-btn copy-btn">
+                    <img src="assets/copy.png" alt="Copy Icon" class="btn-icon">
+                    Copy
+                </button>
+                <button class="card-btn call-btn">
+                    <img src="assets/call.svg" alt="Call Icon" class="btn-icon">
+                    Call
+                </button>
+            </div>
+        `;
+        cardSection.appendChild(card);
+    });
+     
+    cardSection.addEventListener('click', (event) => {
+        const target = event.target;
+        const card = target.closest('.service-card');
+        if (!card) return;
+
+        const serviceName = card.querySelector('.card-title').textContent;
+        const serviceNumber = card.querySelector('.card-number').textContent;
+
+        // Heart icon logic
+        if (target.classList.contains('fav-icon')) {
+            favCount++;
+            favCountEl.textContent = favCount;
+            return;
+        }
+
+        // Copy logic
+        if (target.closest('.copy-btn')) {
+            copyCount++;
+            copyCountEl.textContent = `${copyCount} Copy`;
+            navigator.clipboard.writeText(serviceNumber)
+                .then(() => {
+                    alert(`The number ${serviceNumber} for ${serviceName} has been copied.`);
+                });
+            return;
+        }
+
+
+
+  });
+
+
+  
     });

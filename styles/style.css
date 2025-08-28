@@ -171,3 +171,141 @@ body {
     margin: 10px 0 8px 0;
     letter-spacing: 1px;
 }
+
+
+.category-badge {
+    background-color: #eafff4;
+    color: #00A63E;
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+/* Hero Section */
+
+
+.hero-logo {
+    height: 72px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.hero-slogan {
+    font-size: 1.08rem;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #e0f7fa;
+}
+
+
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.card-btn {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.copy-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1.5px solid #eafff4;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 0;
+    height: 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.98rem;
+}
+.copy-btn:hover {
+    background-color: #eafff4;
+}
+
+.call-btn {
+    background-color: #00A63E;
+    color: #fff;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 0;
+    height: 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.98rem;
+}
+.call-btn:hover {
+    background-color: #008c32;
+}
+
+.btn-icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.copy-btn-nav:hover {
+    background: #008c32;
+}
+
+
+.heart-icon {
+    height: 30px;
+    ;
+      font-weight: 700;
+  
+    font-size: 1.15rem;
+    
+    background: #41ff6a24;
+    
+    
+    border-radius:52px;
+}
+
+.count {
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    color: #000000;
+    background: #41ff6a24;
+    
+     border-radius:52px;
+}
+
+.copy-count {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: #00A63E;
+
+     border-radius:52px;
+}
