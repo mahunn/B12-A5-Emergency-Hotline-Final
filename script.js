@@ -136,9 +136,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
+        // Call button logic
+        if (target.closest('.call-btn')) {
+            if (coinCount < 20) {
+                alert("Insufficient coins to make a call.");
+                return;
+            }
+            coinCount -= 20;
+            coinCountEl.textContent = coinCount;
+            alert(`Calling ${serviceName} at ${serviceNumber}.`);
+
+            // Add to Call History
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+
+            const historyItem = document.createElement('div');
+            historyItem.className = 'call-history-item';
+            historyItem.innerHTML = `
+                <div class="history-details">
+                    <span class="history-name">${serviceName}</span>
+                    <span class="history-number">${serviceNumber}</span>
+                </div>
+                <span class="history-time">${timeString}</span>
+            `;
+            callHistoryList.prepend(historyItem);
+            return;
+        }
+  
+
+    // Clear History Button
+    clearHistoryBtn.addEventListener('click', () => {
+        callHistoryList.innerHTML = '';
+    });
+
+
 
   });
 
 
-  
+
     });
