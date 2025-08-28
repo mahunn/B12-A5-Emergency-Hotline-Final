@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-card {
+    display: flex;
+    align-items: center;
+    background: #eafff4;
+    border-radius: 32px;
+    padding: 0 18px;
+    height: 52px;
+    gap: 8px;
+}
+
+.nav-value {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #000;
+    margin-right: 6px;
+}
+
+.nav-icon {
+    height: 24px;
+    width: 24px;
+}
