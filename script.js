@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearHistoryBtn = document.getElementById('clear-history-btn');
 
     let coinCount = 100;
-    let copyCount = 2;
+    let copyCount = 0;
     let favCount = 0;
 
 
