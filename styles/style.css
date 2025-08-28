@@ -1,3 +1,18 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #f4f4f9 0%, #eaf7f4 100%);
+}
+.website-name {
+    font-size: 1.45rem;
+    font-weight:bold;
+    height: 49px;
+    margin-bottom: 13px;
+    color:#006747;
+    letter-spacing: 0.5px;
+ 
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,4 +60,10 @@
 .nav-icon {
     height: 24px;
     width: 24px;
+}
+.hero-section {
+    text-align: center;
+    padding: 48px 0 32px 0;
+    color: #fff;
+    background: linear-gradient( #013223 0%, #006747 50%,#013223 100%);
 }
